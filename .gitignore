@@ -1,0 +1,16 @@
+target/
+models/
+*.class
+*.jar
+*.log
+.venv/
+djl-cache/
+node_modules/
+.idea/
+*.iml
+.vscode/
+.project
+.classpath
+.settings/
+.DS_Store
+.claude/

@@ -1,0 +1,6 @@
+server:
+  port: 8080
+
+mnist:
+  model-dir: models
+  model-name: mlp

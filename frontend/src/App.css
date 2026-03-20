@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0f0f0f;
+  color: #e0e0e0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 40px;
+}
+
+.main-content {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.canvas-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+canvas {
+  border: 2px solid #333;
+  border-radius: 12px;
+  cursor: crosshair;
+  touch-action: none;
+  width: 280px;
+  height: 280px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-predict {
+  background: #3b82f6;
+  color: white;
+}
+
+.btn-predict:hover:not(:disabled) {
+  background: #2563eb;
+}
+
+.btn-clear {
+  background: #272727;
+  color: #ccc;
+}
+
+.btn-clear:hover {
+  background: #333;
+}
+
+.result-section {
+  min-width: 260px;
+  text-align: left;
+}
+
+.prediction-result {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.big-number {
+  font-size: 6rem;
+  font-weight: 800;
+  color: #3b82f6;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.confidence {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+}
+
+.all-probs h3 {
+  font-size: 0.85rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 10px;
+}
+
+.debug-image {
+  margin-top: 8px;
+  text-align: center;
+}
+
+.debug-image h3 {
+  font-size: 0.75rem;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+}
+
+.debug-image img {
+  width: 84px;
+  height: 84px;
+  image-rendering: pixelated;
+  border: 1px solid #333;
+  border-radius: 4px;
+}
+
+.prob-row.highlight .digit-label {
+  color: #3b82f6;
+}
+
+.prob-row.highlight .prob-bar {
+  background: #3b82f6;
+}
+
+.prob-row.highlight .prob-value {
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+.prob-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.digit-label {
+  width: 16px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #aaa;
+  text-align: right;
+}
+
+.prob-bar-bg {
+  flex: 1;
+  height: 8px;
+  background: #1a1a1a;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.prob-bar {
+  height: 100%;
+  background: #3b82f6;
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+
+.prob-value {
+  width: 48px;
+  font-size: 0.8rem;
+  color: #888;
+  text-align: right;
+}
+
+.train-section {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid #1a1a1a;
+}
+
+.btn-train {
+  background: #1a1a1a;
+  color: #888;
+  font-size: 0.85rem;
+  padding: 8px 20px;
+}
+
+.btn-train:hover:not(:disabled) {
+  background: #222;
+  color: #aaa;
+}
+
+.success {
+  color: #4ade80;
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
+
+.error {
+  color: #f87171;
+  font-size: 0.9rem;
+  padding: 16px;
+  background: #1a1a1a;
+  border-radius: 8px;
+}
